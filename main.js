@@ -144,24 +144,34 @@ function saveData() {
   localStorage.setItem("numList", numList);
 }
 
+const numList = localStorage.getItem("numList");
+
 function showTask() {
-  const numList = localStorage.getItem("numList");
   if (joindataListHTML) {
+    startTest();
     listcontainer.innerHTML = joindataListHTML;
 
     listcontainer.classList.remove("hide");
   } else if (numList == 0) {
     console.log("list kosong");
-    listcontainer.classList.add("hide");
+    emptyData();
   }
 }
 showTask();
+
+function emptyData() {
+  textTest.innerHTML = "Add text test first!";
+  inputTest.disabled = true;
+  infoTimer.style.display = "none";
+  inputTest.placeholder = "text test is empty!";
+}
 
 let j = 0;
 let k = 0;
 
 function startTest() {
   let start = "start";
+
   textTest.innerHTML = 'Type "start" to begin!';
 
   inputTest.addEventListener("input", function () {
@@ -181,7 +191,6 @@ function startTest() {
     }
   });
 }
-startTest();
 
 function theTest() {
   inputTest.addEventListener("input", function () {
@@ -283,7 +292,7 @@ function startTimer() {
 
 listcontainer.addEventListener("click", function (e) {
   saveData();
-  const numList = localStorage.getItem("numList");
+
   if (e.target.className === "delBtn") {
     e.target.parentElement.remove();
     console.log("list terhapus");
