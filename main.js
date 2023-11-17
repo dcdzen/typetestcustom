@@ -76,13 +76,6 @@ function createTask() {
   // location.reload();
 }
 
-function updateData() {
-  textTest.innerHTML = "Refresh page before start!";
-  inputTest.disabled = true;
-  infoTimer.style.display = "none";
-  inputTest.placeholder = "refresh page!";
-}
-
 function addTask() {
   let i = 1;
   if (inputbox.value === "") {
@@ -159,8 +152,15 @@ function showTask() {
 }
 showTask();
 
+function updateData() {
+  textTest.innerHTML = "Refresh the page before you start!";
+  inputTest.disabled = true;
+  infoTimer.style.display = "none";
+  inputTest.placeholder = "refresh the page!";
+}
+
 function emptyData() {
-  textTest.innerHTML = "Add text test first!";
+  textTest.innerHTML = "First, add a text test below!";
   inputTest.disabled = true;
   infoTimer.style.display = "none";
   inputTest.placeholder = "text test is empty!";
