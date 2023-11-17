@@ -96,6 +96,7 @@ input {
   color: var(--light);
   background: transparent;
   border-bottom: 2px solid var(--primary);
+  text-transform: lowercase;
 }
 input:focus {
   opacity: 1;

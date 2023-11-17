@@ -49,7 +49,7 @@ function createTask() {
   listTest.classList.add("inList");
   listcontainer.appendChild(listTest);
 
-  test = inputbox.value;
+  test = inputbox.value.toLowerCase();
 
   spanTest.classList.add("testText");
   spanTest.innerHTML = test;
@@ -181,7 +181,7 @@ function startTest() {
     } else {
       collBtn.disabled = false;
     }
-    if (inputTest.value == start) {
+    if (inputTest.value.toLowerCase() == start) {
       console.log("start!");
       inputTest.value = "";
       textTest.innerHTML = dataList[j];
@@ -196,7 +196,7 @@ function theTest() {
   inputTest.addEventListener("input", function () {
     textTest.innerHTML = dataList[j];
 
-    if (inputTest.value[k] == dataList[j][k]) {
+    if (inputTest.value[k].toLowerCase() == dataList[j][k]) {
       if (inputTest.value.length != k) {
         k = inputTest.value.length;
       } else {
@@ -215,7 +215,7 @@ function theTest() {
       }
     }
 
-    while (inputTest.value == dataList[j]) {
+    while (inputTest.value.toLowerCase() == dataList[j]) {
       console.log("========================");
 
       console.log(textTimer.innerHTML);
