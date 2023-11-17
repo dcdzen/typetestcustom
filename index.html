@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
+    <title>Custom Type Test</title>
+  </head>
+  <body>
+    <header>
+      <a href="https://codenamedcd.github.io/"> <i class="fa fa-arrow-left" aria-hidden="true"></i> back </a>
+      <p>Custom Type Test</p>
+    </header>
+    <section class="section-test">
+      <p id="textTest">Type "start" to begin!</p>
+    </section>
+    <p id="infoTimer"><span id="textTimer">0</span> sec</p>
+    <section class="section-base section-input">
+      <input type="text" id="inputTest" class="form-control" placeholder="type here..." />
+    </section>
+    <section id="alertInfo" class="section-base hide">
+      <p>Add your text!</p>
+    </section>
+    <button id="collBtn" type="button" class="collapsible section-base">Add new text</button>
+    <div class="content section-base">
+      <div class="wrapper">
+        <input type="text" id="input-box" class="form-control" placeholder="Enter text..." />
+        <button type="button" id="myBtn" class="btn" onclick="addTask()">Add</button>
+      </div>
+      <ul id="list-container"></ul>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

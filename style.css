@@ -1,0 +1,281 @@
+:root {
+  --toodark: #373231;
+  --dark: #433e3d;
+  --semidark: #56514f;
+  --light: #f5f5f5;
+  --primary: #d249ec;
+}
+
+body {
+  background-color: var(--toodark);
+  font-family: Nunito;
+  margin: 2rem 14rem;
+}
+
+::placeholder {
+  font-family: Nunito;
+}
+
+p,
+a {
+  color: var(--primary);
+  text-align: center;
+  margin: 0;
+
+  font-size: medium;
+}
+a {
+  border: none;
+  text-decoration: none;
+}
+header {
+  display: flex;
+  margin: 0 0 1rem 0;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+header a,
+header p {
+  background-color: var(--dark);
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  width: 50%;
+  text-transform: uppercase;
+
+  transition: all 0.2s ease-in-out;
+}
+header a {
+  background-color: var(--primary);
+  color: var(--dark);
+}
+header a:hover {
+  opacity: 0.5;
+}
+
+/* ============================================= */
+.section-test {
+  margin: 3rem 0;
+}
+.section-test p {
+  font-size: 22px;
+}
+.section-base {
+  border-radius: 12px;
+  background-color: var(--dark);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.section-input {
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+#alertInfo {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.wrapper {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 26px;
+}
+input,
+.btn {
+  outline: none;
+  border: none;
+}
+input {
+  box-sizing: border-box;
+  padding-bottom: 5px;
+  width: 80%;
+  opacity: 0.8;
+  color: var(--light);
+  background: transparent;
+  border-bottom: 2px solid var(--primary);
+}
+input:focus {
+  opacity: 1;
+}
+.section-input input {
+  font-size: 22px;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+.wrapper input,
+.wrapper button {
+  font-size: medium;
+  padding: 5px;
+}
+
+.btn {
+  width: 5rem;
+  font-weight: bold;
+  color: var(--dark);
+  border-radius: 8px;
+  background-color: var(--primary);
+}
+.btn:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* =============================================== */
+
+.collapsible {
+  color: var(--primary);
+  background: var(--dark);
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: medium;
+  font-weight: bold;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+
+  padding: 1rem 2rem;
+}
+
+.active {
+  background-color: var(--primary);
+  color: var(--dark);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible:hover {
+  opacity: 0.8;
+}
+
+.collapsible:after {
+  content: "\002B";
+  float: right;
+  margin-left: 5px;
+  font-size: 22px;
+}
+
+.active:after {
+  content: "\2212";
+  font-size: 22px;
+}
+
+.content {
+  padding: 0 2rem;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  position: relative;
+}
+
+/* ======================================================== */
+ul {
+  list-style-position: inside;
+  list-style-type: decimal;
+  padding-left: 0;
+  margin: 5px 0;
+}
+ul li {
+  font-size: 17px;
+  padding-top: 12px;
+  user-select: none;
+  position: relative;
+  color: var(--light);
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 18px;
+  border-radius: 50%;
+}
+ul li:last-child {
+  margin-bottom: 2rem;
+}
+
+ul li .delBtn {
+  position: absolute;
+  right: 0;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  font-size: 22px;
+  color: var(--primary);
+  line-height: 27px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li .delBtn:hover {
+  background: var(--light);
+  cursor: pointer;
+}
+#textTimer {
+  font-size: medium;
+}
+#inList {
+  display: flex;
+}
+
+.testText {
+  font-weight: bold;
+  font-size: 22px;
+}
+.testTimer {
+  margin: 0 10px;
+}
+
+/* ============================================== */
+
+.hide {
+  display: none;
+}
+#alertInfo {
+  background: var(--primary);
+}
+#alertInfo p {
+  color: var(--dark);
+  font-weight: bold;
+}
+.ping2deg {
+  animation: ping 0.1s ease-in-out;
+}
+@keyframes ping2 {
+  75%,
+  100% {
+    transform: rotate(2deg);
+  }
+}
+.ping10deg {
+  animation: ping 0.1s ease-in-out;
+}
+@keyframes ping {
+  75%,
+  100% {
+    transform: rotate(10deg);
+  }
+}
+/* ======================================= */
+
+/* mobile */
+@media screen and (max-width: 900px) {
+  body {
+    margin: 2rem 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  header p,
+  header a {
+    font-size: 14px;
+  }
+}
