@@ -31,6 +31,8 @@ let coll = document.getElementsByClassName("collapsible");
 let content = collBtn.nextElementSibling;
 let countList;
 
+emptyData();
+
 inputbox.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
