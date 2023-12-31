@@ -31,7 +31,7 @@ let coll = document.getElementsByClassName("collapsible");
 let content = collBtn.nextElementSibling;
 let countList;
 
-emptyData();
+// emptyData();
 
 inputbox.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
@@ -198,7 +198,7 @@ function theTest() {
   inputTest.addEventListener("input", function () {
     textTest.innerHTML = dataList[j];
 
-    if (inputTest.value[k].toLowerCase() == dataList[j][k]) {
+    if (inputTest.value[k] == dataList[j][k]) {
       if (inputTest.value.length != k) {
         k = inputTest.value.length;
       } else {
